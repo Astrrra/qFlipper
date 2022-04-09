@@ -12,4 +12,4 @@ export QML_SOURCES_PATHS='..'
 
 mkdir -p $BUILDDIR && cd $BUILDDIR
 qmake ../$TARGET.pro -spec linux-g++ CONFIG+=qtquickcompiler PREFIX=$APPDIR_PREFIX && make qmake_all && make -j$(nproc) && make install
-linuxdeploy --appdir=AppDir -o appimage --custom-apprun=../installer-assets/appimage/AppRun --plugin=qt 
+# linuxdeploy --appdir=AppDir -o appimage --custom-apprun=../installer-assets/appimage/AppRun --plugin=qt 
